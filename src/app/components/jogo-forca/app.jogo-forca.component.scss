@@ -1,0 +1,114 @@
+body, html{
+  padding: 0rem;
+  margin: 0rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.flex{
+  display: flex;
+}
+
+.w-12{
+  width: 100%;
+}
+
+.h-12{
+  height: 100vw;
+}
+.w-11{
+  width: 90%;
+}
+
+.justify-content-start{
+  justify-content: flex-start;
+}
+.justify-content-between{
+  justify-content: space-between;
+}
+.justify-content-center{
+  justify-content: center;
+}
+.justify-content-evenly{
+  justify-content: space-evenly;
+}
+.flex-column{
+  flex-direction: column;
+}
+
+.flex-row{
+  flex-direction: row;
+}
+
+.btn{
+  border: none;
+  padding: 0.15rem;
+
+  border-radius: 5px;
+  margin: 0.5rem;
+  width: 100px;
+  height: 35px;
+}
+
+.btn h3{
+  color: white;
+}
+
+.position{
+  position: absolute;
+  left: 5%;
+}
+
+select{
+  border: 0.5px solid #b6b6b6;
+  border-radius: 5px;
+  padding: 0.8rem;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.mySVGCenter{
+  width: 250px;
+  height: 180px;
+  max-width: 100%;
+
+}
+
+.color-red{
+  color: red;
+}
+
+.bloco-letra{
+  width: 20px;
+  height: 20px;
+  margin: 0.15rem;
+  border-bottom: solid black 5px;
+}
+
+.bloco-letra h6{
+  margin: 0rem;
+  padding-left: 7px;
+}
+h1, h2, h3, h4, h5, h6{
+  font-family: 'Open Sans', sans-serif;
+  margin: 0.25rem;
+  padding: 0rem;
+}
+
+.letra{
+  margin: 0.1rem;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.m-5{
+  margin: 0.8rem;
+}
+.btn-primary{
+  background-color: #00ff00;
+}
+.btn-jogar-novamente{
+  background-color: #ff4040;
+  width: 200px;
+}

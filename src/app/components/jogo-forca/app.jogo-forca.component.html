@@ -1,0 +1,186 @@
+
+
+
+<div class="w-12 h-12" >
+    <div class="flex flex-column w-11 h-12 position">
+
+      <h2 class="flex justify-content-center">Jogo da Forca</h2>
+
+      <form [formGroup]="form" class="flex flex-column" (ngSubmit)="submit()">
+
+        <h5>Selecione uma modalidade: </h5>
+        <select formControlName="jogo_forca" name="demo" id="#" >
+          <option  *ngFor="let i of options" (click)='jogarNovamente()'
+          selected="selected"><h6>{{i.nome}}</h6></option>
+        </select>
+
+
+
+      <div class="flex justify-content-center">
+        <button class="btn btn-primary" type="submit" [disabled]="!form.valid">
+          <h3>Jogar</h3>
+        </button>
+      </div>
+      </form>
+
+
+     <div class="mySVGCenter">
+      <!-- forca_1 -->
+      <ng-container *ngIf="countImg == 1">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 0">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 2">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="229" y="152" width="10" height="75" fill="#D9D9D9"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 3">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="228" y="154" width="10" height="75" fill="#D9D9D9"/>
+          <rect x="234" y="158.31" width="6.09547" height="40.2914" transform="rotate(-45 234 158.31)" fill="#D9D9D9"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 4">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="228" y="154" width="10" height="75" fill="#D9D9D9"/>
+          <rect x="234" y="158.31" width="6.09547" height="40.2914" transform="rotate(-45 234 158.31)" fill="#D9D9D9"/>
+          <rect x="198.496" y="184.103" width="6.09547" height="40.2914" transform="rotate(-125 198.496 184.103)" fill="#D9D9D9"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 5">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="228" y="154" width="10" height="75" fill="#D9D9D9"/>
+          <rect x="234" y="158.31" width="6.09547" height="40.2914" transform="rotate(-45 234 158.31)" fill="#D9D9D9"/>
+          <rect x="230" y="229.31" width="6.09547" height="40.2914" transform="rotate(-45 230 229.31)" fill="#D9D9D9"/>
+          <rect x="198.496" y="184.103" width="6.09547" height="40.2914" transform="rotate(-125 198.496 184.103)" fill="#D9D9D9"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 6">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="228" y="154" width="10" height="75" fill="#D9D9D9"/>
+          <rect x="234" y="158.31" width="6.09547" height="40.2914" transform="rotate(-45 234 158.31)" fill="#D9D9D9"/>
+          <rect x="230" y="229.31" width="6.09547" height="40.2914" transform="rotate(-45 230 229.31)" fill="#D9D9D9"/>
+          <rect x="198.496" y="184.103" width="6.09547" height="40.2914" transform="rotate(-125 198.496 184.103)" fill="#D9D9D9"/>
+          <rect x="200.496" y="253.103" width="6.09547" height="40.2914" transform="rotate(-125 200.496 253.103)" fill="#D9D9D9"/>
+          </svg>
+      </ng-container>
+
+      <ng-container *ngIf="countImg == 7">
+        <svg width="250" height="300" viewBox="0 0 490 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="6" y="44" width="38" height="281" fill="black"/>
+          <rect x="6" y="6" width="241" height="38" fill="black"/>
+          <rect x="220" y="44" width="27" height="38" fill="black"/>
+          <rect width="9" height="40" transform="matrix(-1 0 0 1 238 82)" fill="#964B00"/>
+          <ellipse cx="233" cy="138" rx="24" ry="16" fill="#D9D9D9"/>
+          <ellipse cx="224.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <ellipse cx="242.5" cy="136" rx="4.5" ry="4" fill="#AAAAAA"/>
+          <rect x="226" y="144" width="16" height="4" fill="#AAAAAA"/>
+          <rect x="228" y="154" width="10" height="75" fill="#D9D9D9"/>
+          <rect x="234" y="158.31" width="6.09547" height="40.2914" transform="rotate(-45 234 158.31)" fill="#D9D9D9"/>
+          <rect x="230" y="229.31" width="6.09547" height="40.2914" transform="rotate(-45 230 229.31)" fill="#D9D9D9"/>
+          <rect x="198.496" y="184.103" width="6.09547" height="40.2914" transform="rotate(-125 198.496 184.103)" fill="#D9D9D9"/>
+          <rect x="200.496" y="253.103" width="6.09547" height="40.2914" transform="rotate(-125 200.496 253.103)" fill="#D9D9D9"/>
+          <rect x="209" y="116" width="52" height="4" fill="#FF0000"/>
+          <rect x="221" y="138.364" width="9" height="2" transform="rotate(-45 221 138.364)" fill="black"/>
+          <rect x="238" y="138.364" width="9" height="2" transform="rotate(-45 238 138.364)" fill="black"/>
+          <rect x="226.162" y="140.52" width="9" height="2" transform="rotate(-125 226.162 140.52)" fill="black"/>
+          <rect x="226.162" y="140.52" width="9" height="2" transform="rotate(-125 226.162 140.52)" fill="black"/>
+          <rect x="243.162" y="140.52" width="9" height="2" transform="rotate(-125 243.162 140.52)" fill="black"/>
+          </svg>
+      </ng-container>
+
+     </div>
+
+      <div class='flex flex-row justify-content-center flex-wrap'*ngIf="showDiv">
+          <div *ngFor="let bloco of arrayPalavraSorteada">
+            <div class="bloco-letra" >
+              <h6 *ngIf="bloco.selected">{{bloco.letra}}</h6>
+            </div>
+          </div>
+      </div>
+
+      <div class="flex flex-wrap">
+        <div *ngFor="let l of alfabeto">
+          <h2 (click)='selecionarLetra(l)'class='m-5' [ngClass]="l.selected ? 'color-red' : ''" >{{l.nome}}</h2>
+        </div>
+      </div>
+
+      <div  *ngIf="showDivGanhador" >
+        <div class="flex flex-row justify-content-center" *ngIf="jogadorPerdeu"><h5>Você perdeu :( Tente Novamente</h5></div>
+        <div class="flex flex-row justify-content-center" *ngIf="jogadorVenceu"><h5>Você ganhou!! Parabéns</h5></div>
+
+        <div class="flex flex-row justify-content-center">
+          <button class="btn btn-jogar-novamente" type="submit">
+            <h3 (click)="jogarNovamente()">Jogar Novamente</h3>
+          </button>
+        </div>
+      </div>
+
+    </div>
+</div>
+
+
+
