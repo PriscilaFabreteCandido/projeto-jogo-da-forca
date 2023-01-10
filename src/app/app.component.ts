@@ -12,7 +12,7 @@ export class AppComponent {
     ) { }
 
     ngOnInit() {
-      this.router.navigate(['/jogar']);
+      this.router.navigate(['/home']);
     }
 
     goToPlay() {

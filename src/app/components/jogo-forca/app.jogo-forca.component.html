@@ -11,7 +11,7 @@
         <h5>Selecione uma modalidade: </h5>
         <select formControlName="jogo_forca" name="demo" id="#" >
           <option  *ngFor="let i of options" (click)='jogarNovamente()'
-          selected="selected"><h6>{{i.nome}}</h6></option>
+          selected="selected" ><h6>{{i.nome}}</h6></option>
         </select>
 
 
@@ -156,8 +156,8 @@
 
       <div class='flex flex-row justify-content-center flex-wrap'*ngIf="showDiv">
           <div *ngFor="let bloco of arrayPalavraSorteada">
-            <div class="bloco-letra" >
-              <h6 *ngIf="bloco.selected">{{bloco.letra}}</h6>
+            <div [ngClass]="bloco.letra != ' ' ? 'bloco-letra' : 'bloco-letra-none-border'">
+              <h6 *ngIf="bloco.selected" >{{bloco.letra}}</h6>
             </div>
           </div>
       </div>

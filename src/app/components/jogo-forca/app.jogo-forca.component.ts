@@ -16,38 +16,38 @@ export class AppJogoForcaComponent implements OnInit {
   selectedModalidade: any;
 
   alfabeto: any[] = [
-    {nome: 'A', selected: false},
-    {nome: 'B', selected: false},
-    {nome: 'C', selected: false},
-    {nome: 'D', selected: false},
-    {nome: 'E', selected: false},
-    {nome: 'F', selected: false},
-    {nome: 'G', selected: false},
-    {nome: 'H', selected: false},
-    {nome: 'I', selected: false},
-    {nome: 'J', selected: false},
-    {nome: 'K', selected: false},
-    {nome: 'L', selected: false},
-    {nome: 'M', selected: false},
-    {nome: 'N', selected: false},
-    {nome: 'O', selected: false},
-    {nome: 'P', selected: false},
-    {nome: 'Q', selected: false},
-    {nome: 'R', selected: false},
-    {nome: 'S', selected: false},
-    {nome: 'T', selected: false},
-    {nome: 'U', selected: false},
-    {nome: 'V', selected: false},
-    {nome: 'W', selected: false},
-    {nome: 'X', selected: false},
-    {nome: 'Y', selected: false},
-    {nome: 'Z', selected: false},
+    {nome: 'A', selected: false, showDiv: true},
+    {nome: 'B', selected: false, showDiv: true},
+    {nome: 'C', selected: false, showDiv: true},
+    {nome: 'D', selected: false, showDiv: true},
+    {nome: 'E', selected: false, showDiv: true},
+    {nome: 'F', selected: false, showDiv: true},
+    {nome: 'G', selected: false, showDiv: true},
+    {nome: 'H', selected: false, showDiv: true},
+    {nome: 'I', selected: false, showDiv: true},
+    {nome: 'J', selected: false, showDiv: true},
+    {nome: 'K', selected: false, showDiv: true},
+    {nome: 'L', selected: false, showDiv: true},
+    {nome: 'M', selected: false, showDiv: true},
+    {nome: 'N', selected: false, showDiv: true},
+    {nome: 'O', selected: false, showDiv: true},
+    {nome: 'P', selected: false, showDiv: true},
+    {nome: 'Q', selected: false, showDiv: true},
+    {nome: 'R', selected: false, showDiv: true},
+    {nome: 'S', selected: false, showDiv: true},
+    {nome: 'T', selected: false, showDiv: true},
+    {nome: 'U', selected: false, showDiv: true},
+    {nome: 'V', selected: false, showDiv: true},
+    {nome: 'W', selected: false, showDiv: true},
+    {nome: 'X', selected: false, showDiv: true},
+    {nome: 'Y', selected: false, showDiv: true},
+    {nome: 'Z', selected: false, showDiv: true},
   ];
 
-  frutas: any = [ "UVA", "BANANA", "MANGA", "CAJA", "PINHA", 'FIGO', "ACEROLA"];
+  frutas: any = [ "UVA", "BANANA", "MANGA", "CAJA", "PINHA", 'FIGO', "ACEROLA", "CACAU", "CAQUI", "CARAMBOLA"];
   animais: any = ["ABELHA", "ANTA", "ARANHA", "COBRA", "ARARA", "BARATA", "BOI", "BORBOLETA", "BURRO", "CIGARRA",
   "CERVO", "CUPIM", "DINGO", "ELEFANTE"]
-  cidades: any = ["MANAUS", "PERNAMBUCO", "SALVADOR", "BRASILIA"];
+  cidades: any = ["BELO HORIZONTE", "LONDRES", "SALVADOR", "BRASILIA", "RIO DE JANEIRO"];
   palavraSorteada: string = '';
   arrayPalavraSorteada: any[] = [];
   showDiv: boolean = false;
@@ -82,7 +82,7 @@ export class AppJogoForcaComponent implements OnInit {
         this.palavraSorteada = this.animais[i];
 
         for(let i = 0; i < this.palavraSorteada.length; i++){
-            this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: false});
+            this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: this.palavraSorteada[i] == ' ' ? true: false});
         }
        this.showDiv = true;
        console.log(this.palavraSorteada)
@@ -93,7 +93,7 @@ export class AppJogoForcaComponent implements OnInit {
         i = this.getRandomInt(0, tam);
         this.palavraSorteada = this.frutas[i];
         for(let i = 0; i < this.palavraSorteada.length; i++){
-          this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: false});
+          this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: this.palavraSorteada[i] == ' ' ? true: false});
         }
         this.showDiv = true;
     }
@@ -103,7 +103,7 @@ export class AppJogoForcaComponent implements OnInit {
         i = this.getRandomInt(0, tam);
         this.palavraSorteada = this.cidades[i];
         for(let i = 0; i < this.palavraSorteada.length; i++){
-          this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: false});
+          this.arrayPalavraSorteada.push({letra: this.palavraSorteada[i], selected: this.palavraSorteada[i] == ' ' ? true: false});
         }
         this.showDiv = true;
     }
